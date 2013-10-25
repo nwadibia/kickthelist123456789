@@ -1,0 +1,2 @@
+module PaheHelper
+end
