@@ -1,10 +1,12 @@
 <div class="jumbotron center">
-     <img src ="http://kickthelist.com/assets/logo4.png">
+     
      
      <% if user_signed_in? %>
-     # do something
+     Welcome To #KickTheList... We're making the greatest app EVER! 
+     <p>Thanks for signing up. We'll be up and running shortly! 
+     	<p>:-) 
      <% else %>
-     	<p>
+     	<p> <img src ="http://kickthelist.com/assets/logo4.png">
      		<p> Creat a list of things you want to do <p>
    			 <p> Check them off when you're done! <p>
        		<%= link_to "Sign up and Start Kickin!", new_user_registration_path, class: "btn btn-primary btn-lg" %>
