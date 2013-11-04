@@ -1,9 +1,10 @@
-<h1>Listing items</h1>
+<h1>Everything I Want to Do</h1>
 
+<br>
 <table>
   <thead>
     <tr>
-      <th>Description</th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -13,7 +14,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= item.description %></td>
+        <td><%= item.description %></td> 
         <td><%= link_to 'Show', item %> | </td>  
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
       </tr>
@@ -23,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'Add more', new_item_path, class: "btn btn-primary" %>

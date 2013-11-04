@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
+  <strong></strong>
   <%= @item.description %>
 </p>
 
-<%= link_to 'Back', items_path %>   |
+<%= link_to 'My List', items_path %>   |
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Destroy', items_path, method: :delete, data: { confirm: 'Are you sure?' } %>
