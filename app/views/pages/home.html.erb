@@ -2,12 +2,17 @@
      
      
      <% if user_signed_in? %>
-     You're one step closer to awesome. 
-     <p> Stay tuned for updates...   
+     You're one step closer to awesome.  
+
+     <br>
+     <br>
+       <%= link_to 'Keep goin', new_item_path, class: "btn btn-primary btn-lg" %>
+
      <% else %>
         <div class=jumbotron center">
          	<p> <img src ="http://kickthelist.com/assets/logo4.png"><br>
-         		<h2><p> Cause life's too short not to. <p><h2>
+         		<h2><p> of things that make you awesome.<h2>
+            <h2><p> 'Cause life's too short not to. <p><h2>
            	<br><%= link_to "Get Kickin", new_user_registration_path, class: "btn btn-primary btn-lg" %>
       		</p>  
         </div>
