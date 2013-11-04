@@ -1,4 +1,6 @@
 Kickthelist::Application.routes.draw do
+  resources :items
+
   devise_for :users
   #devise_for :installs
   root "pages#home"
