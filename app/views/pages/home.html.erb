@@ -1,5 +1,7 @@
 <div class="jumbotron center">
      
+
+
      
      <% if user_signed_in? %>
      You're one step closer to awesome.  
@@ -19,6 +21,28 @@
             <%= link_to 'or Sign in', new_user_session_path, style: "font-size: 14px" %>
       		</p>  
         </div>
+
+        <div class="jumbotron center">
+
+              <hr height="4px" width="100%"/>
+                                <div id="fb-root"></div>
+                      <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }(document, 'script', 'facebook-jssdk'));</script>
+
+                      <div class="fb-like-box" data-href="http://www.facebook.com/KickTheList" data-width="1000px" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+              
+              <hr size="2" width="100%"/>
+
+          </div>
+
+
       <% end %>
 
 </div>
+
+
