@@ -22,5 +22,6 @@
 </table>
 
 <br>
-
-<%= link_to 'Add more', new_item_path, class: "btn btn-primary" %>
+<% if user_signed_in? %>
+  <%= link_to 'Add more', new_item_path, class: "btn btn-primary" %>
+<% end %>
