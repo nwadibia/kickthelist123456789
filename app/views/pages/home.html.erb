@@ -4,12 +4,16 @@
 
      
      <% if user_signed_in? %>
-     You're one step closer to awesome.  
-
-     <br>
-     <br>
+     
+     <h2> Even more Awesome than You thought. <h2>
+      <p> <h2>Keep it goin'<p>
+      <br>
     
-       <%= link_to 'Add to My List', items_path, class: "btn btn-primary btn-lg" %>
+       <%= link_to 'Add More Cool Stuff', items_path, class: "btn btn-primary btn-lg" %>
+<br>
+<br>
+        <hr height="10px" width="100%"/>
+       <p> <h4> Check Out What Other People Are Doing<h4><p>
 
      <% else %>
         <div class=jumbotron center">
@@ -26,9 +30,9 @@
 
               <hr height="10px" width="100%"/>
                                 
-                                <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FKickTheList&amp;width=800&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:258px;" allowTransparency="true"></iframe>
+                                
 
-          </div>
+
 
 
       <% end %>
