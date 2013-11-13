@@ -5,7 +5,7 @@
   <thead>
     <tr>
       <th></th>
-      <th></th>
+      <th>User</th>
       <th></th>
       <th></th>
     </tr>
@@ -15,10 +15,15 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.description %></td> 
+        <td><%= item.user.email if item.user %></td>
         <td><%= link_to 'Show', item %> | </td> 
+        
+        <% if item.user == current_user%>
         <td><%= link_to 'Edit', edit_item_path(item) %> | </td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+
               <span class="glyphicon glyphicon-trash"></span></td> 
+              <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +32,7 @@
 <br>
 <% if user_signed_in? %>
   <%= link_to 'Add more', new_item_path, class: "btn btn-primary" %>
+
+  <% else %> 
+    <%= link_to 'Start your own list!', new_user_registration_path, class: "btn btn-primary" %>
 <% end %>
