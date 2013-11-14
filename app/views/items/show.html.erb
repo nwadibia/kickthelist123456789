@@ -1,23 +1,31 @@
-<div class="box panel panel-default">
-<p id="notice"><%= notice %></p>
+<%= link_to 'Back', items_path %>  
+<p>
+<p>
+<p>
+<div class="row">
+  	<div class="col-md-offset-2 col-md-8">
+	    <div class="panel panel-default">
 
-<p>
-  <strong></strong>
-  		
-  <h4> &nbsp;&nbsp;&nbsp;&nbsp;
-  	<%= @item.description %>
-  </h4>	
-</p>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-<span class="glyphicon glyphicon-arrow-left"></span>
-		&nbsp;
-<%= link_to 'Back to my list', items_path %>   
-<% if @item.user == current_user%>
-	| <%= link_to 'Edit', edit_item_path(@item) %> 
-<% end %>
-<p>
-<p>
-<p>
+			<p id="notice"><%= notice %></p>		
+	  		<p>
+	  			<h5>
+	  				&nbsp;&nbsp;&nbsp;&nbsp;
+	  				<strong><%= @item.user.email if @item.user %></strong></h5></p>
+	  	 		<h4> 
+	  	 			&nbsp;&nbsp;&nbsp;&nbsp;
+	  			<%= @item.description %>
+	  			</h4>	
+			</p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp; 
+			<% if @item.user == current_user%>
+				|<%= link_to 'Edit', edit_item_path(@item) %> 
+			<% end %>
+			<p>
+			<p>
+			<p>
+		</div>
+  	</div>
 </div>
            
          

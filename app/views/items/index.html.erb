@@ -3,25 +3,26 @@
    <% @items.each do |item| %>
       <div class="box panel panel-default">
         <h5> &nbsp;&nbsp;&nbsp;&nbsp; 
-          <%= item.user.email if item.user %> 
+          <strong><%= item.user.email if item.user %> </strong>
+          <p>
           <p>
           <p> 
           <h4> &nbsp;&nbsp;&nbsp;&nbsp; 
-            <%= item.description %>
+            <%= link_to item.description, item %>
           </h4>
+          <p>
           <p>
           <p> 
               &nbsp;&nbsp;&nbsp;&nbsp;
-            <% if item.user == current_user%>
-              <%= link_to 'Show', item %> | &nbsp;&nbsp; 
-              <%= link_to 'Edit', edit_item_path(item) %> &nbsp;
-                <span class="glyphicon glyphicon-pencil"></span> 
+            <% if item.user == current_user%> 
+                &nbsp;
+              <span class="glyphicon glyphicon-pencil"></span>
+              <%= link_to 'Edit', edit_item_path(item) %> 
+                 
                   &nbsp;&nbsp;| &nbsp;&nbsp;
+              <span class="glyphicon glyphicon-trash"></span>   
               <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp;
-                  <span class="glyphicon glyphicon-trash"></span>
 
-            <% else %>
-              <%= link_to 'Show', item %> | &nbsp;&nbsp;
               <p>
               <p>
             <% end %>
