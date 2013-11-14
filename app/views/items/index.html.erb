@@ -1,33 +1,27 @@
-<h1>Everything I Want to Do</h1>
-
-<br>
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.description %></td> 
-        <td><%= item.user.email if item.user %></td>
-        <td><%= link_to 'Show', item %> | </td> 
-        
-        <% if item.user == current_user%>
-        <td><%= link_to 'Edit', edit_item_path(item) %> | </td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-              <span class="glyphicon glyphicon-trash"></span></td> 
-              <% end %>
-      </tr>
+<div id="items" class="transitions-enabled">
+   
+   <% @items.each do |item| %>
+      <div class="box panel panel-default">
+        <h5> &nbsp;&nbsp;&nbsp;&nbsp; 
+          <%= item.user.email if item.user %> 
+          <p>
+          <p> 
+          <h4> &nbsp;&nbsp;&nbsp;&nbsp; 
+            <%= item.description %>
+          </h4>
+          <p>
+          <p> 
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to 'Show', item %> |  
+            <% if item.user == current_user%>
+              <%= link_to 'Edit', edit_item_path(item) %> | 
+              <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <span class="glyphicon glyphicon-trash"></span>
+            <% end %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+
+  
 
 <br>
 <% if user_signed_in? %>
@@ -36,3 +30,5 @@
   <% else %> 
     <%= link_to 'Start your own list!', new_user_registration_path, class: "btn btn-primary" %>
 <% end %>
+
+</div>
