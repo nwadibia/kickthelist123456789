@@ -12,11 +12,18 @@
           <p>
           <p> 
               &nbsp;&nbsp;&nbsp;&nbsp;
-            <%= link_to 'Show', item %> |  
             <% if item.user == current_user%>
-              <%= link_to 'Edit', edit_item_path(item) %> | 
-              <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Show', item %> | &nbsp;&nbsp; 
+              <%= link_to 'Edit', edit_item_path(item) %> &nbsp;
+                <span class="glyphicon glyphicon-pencil"></span> 
+                  &nbsp;&nbsp;| &nbsp;&nbsp;
+              <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp;
                   <span class="glyphicon glyphicon-trash"></span>
+
+            <% else %>
+              <%= link_to 'Show', item %> | &nbsp;&nbsp;
+              <p>
+              <p>
             <% end %>
       </div>
     <% end %>

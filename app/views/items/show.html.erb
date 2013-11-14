@@ -1,13 +1,23 @@
+<div class="box panel panel-default">
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong></strong>
-  <%= @item.description %>
+  		
+  <h4> &nbsp;&nbsp;&nbsp;&nbsp;
+  	<%= @item.description %>
+  </h4>	
 </p>
-
+		&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="glyphicon glyphicon-arrow-left"></span>
+		&nbsp;
 <%= link_to 'Back to my list', items_path %>   
 <% if @item.user == current_user%>
 	| <%= link_to 'Edit', edit_item_path(@item) %> 
 <% end %>
+<p>
+<p>
+<p>
+</div>
            
          
