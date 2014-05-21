@@ -1,10 +1,12 @@
-<div class="jumbotron center">
-     
+<div class="jumbotron center" style="opacity:0.9">
+     <body background="https://scontent-b-pao.xx.fbcdn.net/hphotos-ash3/69509_10151546471377775_1969703611_n.jpg" stye="opacity:0.9;">
+
 
 
      
      <% if user_signed_in? %>
-     
+    <body background="https://scontent-b-pao.xx.fbcdn.net/hphotos-ash3/69509_10151546471377775_1969703611_n.jpg" stye="opacity:0.5;">
+
      <h2> Even more Awesome than You thought. <h2>
       <p> <h2>Keep it goin'<p>
       <br>
@@ -16,7 +18,7 @@
        <p> <h4> Check Out What Other People Are Doing<h4><p>
 
      <% else %>
-        <div class=jumbotron center">
+        <div>
          	 
             <p> <img style= "width: 100%" src ="http://kickthelist.com/assets/logo4.png"><br>
              
@@ -24,15 +26,8 @@
            	<br><%= link_to "Start", new_user_registration_path, class: "btn btn-success btn-lg" %>
             <%= link_to 'or Sign in', new_user_session_path, style: "font-size: 14px" %>
       		</p>  
-        </div>
-
-        <br>
-
-              <hr height="10px" width="100%"/>
+        </div>                                
                                 
-                                
-
-
 
 
       <% end %>

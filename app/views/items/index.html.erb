@@ -1,10 +1,13 @@
 
 <% if user_signed_in? %>
 
-<div id="items" class="transitions-enabled">
-   
+<dliv id="items" class="transitions-enabled">
+  <body background="https://scontent-b-pao.xx.fbcdn.net/hphotos-ash3/69509_10151546471377775_1969703611_n.jpg" stye="opacity:0.9;">
+
    <% @items.each do |item| %>
-      <div class="box panel panel-default">
+      <div class="box panel panel-default, width: 100px">
+
+
         <h5> &nbsp;&nbsp;&nbsp;&nbsp; 
           <strong><%= item.user.email if item.user %> </strong>
           <p>
